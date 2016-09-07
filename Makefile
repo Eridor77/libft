@@ -6,7 +6,7 @@
 #    By: rlavallo <rlavallo@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2014/11/03 16:26:26 by rlavallo          #+#    #+#              #
-#    Updated: 2015/09/28 16:07:47 by rlavallo         ###   ########.fr        #
+#    Updated: 2016/02/16 11:46:59 by rlavallo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -54,6 +54,8 @@ SRC =	ft_strcmp.c \
 		ft_strsub.c \
 		ft_strjoin.c \
 		ft_strtrim.c \
+		ft_strsplit.c \
+		ft_itoa.c \
 		ft_putchar.c \
 		ft_putstr.c \
 		ft_putendl.c \
@@ -61,13 +63,20 @@ SRC =	ft_strcmp.c \
 		ft_putchar_fd.c \
 		ft_putstr_fd.c \
 		ft_putendl_fd.c \
-		ft_putnbr_fd.c
+		ft_putnbr_fd.c \
+		ft_lstnew.c \
+		ft_lstdelone.c \
+		ft_lstdel.c \
+		ft_lstadd.c \
+		ft_lstiter.c \
+		ft_lstmap.c \
+		ft_sq.c
 OBJ = $(SRC:.c=.o)
 
-all: $(NAME) clean
+all: $(NAME)
 
 $(NAME):
-	@$(GCC) -c $(SRC) -I includes
+	@$(GCC) -c $(SRC) libft.h
 	@ar rc $(NAME) $(OBJ)
 	ranlib $(NAME)
 	@echo "libft ready"
@@ -83,4 +92,4 @@ fclean: clean
 re: fclean all
 
 norme: 
-	@norminette $(SRC) includes/libft.h
+	@norminette $(SRC) libft.h
