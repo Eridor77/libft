@@ -6,13 +6,13 @@
 /*   By: rlavallo <rlavallo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/06 15:59:49 by rlavallo          #+#    #+#             */
-/*   Updated: 2014/11/06 16:08:07 by rlavallo         ###   ########.fr       */
+/*   Updated: 2016/02/16 12:27:11 by rlavallo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	ft_tolower(char c)
+int		ft_tolower(int c)
 {
-	if (c >= 65 && c <= 90)
+	if (c >= 'A' && c <= 'Z')
 		c += 32;
 	return (c);
 }

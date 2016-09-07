@@ -6,7 +6,7 @@
 /*   By: rlavallo <rlavallo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/03 15:53:59 by rlavallo          #+#    #+#             */
-/*   Updated: 2014/11/10 14:42:04 by rlavallo         ###   ########.fr       */
+/*   Updated: 2016/01/21 09:04:24 by rlavallo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,24 @@
 
 void	ft_putnbr(int n)
 {
-	if (n < 0)
-	{
-		ft_putchar('-');
-		n = -n;
-	}
-	if (n > 10)
-	{
-		ft_putnbr(n / 10);
-		ft_putnbr(n % 10);
-	}
+	/*if (n == -2147483648)
+		ft_putstr("-2147483648");
 	else
-	{
-		n += 48;
-		write(1, &n, 1);
-	}
+	{*/
+		if (n < 0)
+		{
+			ft_putchar('-');
+			n = -n;
+		}
+		if (n >= 10)
+		{
+			ft_putnbr(n / 10);
+			ft_putnbr(n % 10);
+		}
+		else
+		{
+			n += 48;
+			write(1, &n, 1);
+		}
+	//}
 }

@@ -12,7 +12,7 @@
 
 int		ft_isprint(int c)
 {
-	if (c > 31 && c < 127)
+	if ((unsigned int)c >= ' ' && (unsigned int)c <= '~')
 		return (1);
 	return (0);
 }

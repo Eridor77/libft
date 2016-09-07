@@ -6,13 +6,13 @@
 /*   By: rlavallo <rlavallo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/06 16:01:18 by rlavallo          #+#    #+#             */
-/*   Updated: 2014/11/06 16:01:45 by rlavallo         ###   ########.fr       */
+/*   Updated: 2016/02/16 12:27:28 by rlavallo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	ft_toupper(char c)
+int		ft_toupper(int c)
 {
-	if (c >= 97 && c <= 122)
+	if (c >= 'a' && c <= 'z')
 		c -= 32;
 	return (c);
 }

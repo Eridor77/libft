@@ -1,0 +1,17 @@
+#include "libft.h"
+
+int	main(void)
+{
+	int	c;
+
+	c = 0;
+	while (c < 10)
+	{
+		ft_putnbr(c);
+		ft_putstr("² = ");
+		ft_putnbr(ft_sqr(c));
+		ft_putchar('\n');
+		c++;
+	}
+	return (0);
+}

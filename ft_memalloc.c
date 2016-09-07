@@ -6,7 +6,7 @@
 /*   By: rlavallo <rlavallo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/08 15:22:38 by rlavallo          #+#    #+#             */
-/*   Updated: 2014/11/11 16:59:55 by rlavallo         ###   ########.fr       */
+/*   Updated: 2016/02/16 13:22:24 by rlavallo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,8 @@ void	*ft_memalloc(size_t size)
 
 	if ((int)size < 0)
 		return (NULL);
-	a = malloc(sizeof(char) * size);
+	if ((a = malloc(sizeof(char) * size)) == NULL)
+		return (NULL);
 	a = ft_memset(a, 0, size);
 	return (a);
 }

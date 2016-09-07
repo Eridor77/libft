@@ -6,7 +6,7 @@
 /*   By: rlavallo <rlavallo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/03 15:19:05 by rlavallo          #+#    #+#             */
-/*   Updated: 2015/09/28 16:19:34 by rlavallo         ###   ########.fr       */
+/*   Updated: 2016/02/16 12:47:09 by rlavallo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,6 @@ size_t	ft_strlen(const char *str)
 {
 	size_t	i;
 
-	if (str == NULL)
-		return (0);
 	i = 0;
 	while (str[i] != '\0')
 		i++;
