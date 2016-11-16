@@ -70,6 +70,7 @@ SRC =	ft_strcmp.c \
 		ft_lstadd.c \
 		ft_lstiter.c \
 		ft_lstmap.c \
+		ft_lstback.c \
 		ft_sq.c
 OBJ = $(SRC:.c=.o)
 
